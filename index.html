@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Mágico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- INVENTARIO -->
+        <div class="inventario-container">
+            <div class="Titulo">
+                <h2>Inventario</h2>
+            </div>
+
+            <div class="forja" id="hierro1" draggable="true" data-tipo="metal">Hierro</div>
+            <div class="carpinteria" id="madera1" draggable="true" data-tipo="madera">Madera</div>
+            <div class="alquimia" id="polvora1" draggable="true" data-tipo="alquimia">Polvora</div>
+            <div class="forja" id="acero1" draggable="true" data-tipo="metal">Acero</div>
+            <div class="alquimia" id="pluma1" draggable="true" data-tipo="alquimia">Pluma</div>
+        </div>
+
+        <!-- TALLER -->
+        <div class="taller-container">
+            <div class="estaciones-container">
+                <div class="Titulo">
+                    <h2>Estación de Trabajo</h2>
+                </div>
+
+                <div class="Taller" id="Forja" data-accept="metal">
+                    <img src="./imgs/yunqueSinUsar.png" alt="Forja">
+                </div>
+
+                <div class="Taller" id="Banco" data-accept="madera">
+                    <img src="./imgs/bancoSinUsar.png" alt="Banco">
+                </div>
+
+                <div class="Taller" id="Caldero" data-accept="alquimia">
+                    <img src="./imgs/calderoSinUsar.webp" alt="Caldero">
+                </div>
+            </div>
+        </div>
+
+        <!-- ALMACÉN -->
+        <div class="almacen-container">
+            <div class="Titulo">
+                <h2>Almacén</h2>
+            </div>
+
+            <div id="LAcero">
+                <img src="./imgs/LAcero.webp" alt="Acero">
+                <div class="cantidad">0</div>
+            </div>
+
+            <div id="Flechas">
+                <img src="./imgs/Flechas.webp" alt="Flechas">
+                <div class="cantidad">0</div>
+            </div>
+
+            <div id="Bombas">
+                <img src="./imgs/Bomba.webp" alt="Bombas">
+                <div class="cantidad">0</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

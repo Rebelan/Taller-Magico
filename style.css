@@ -1,0 +1,138 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+body {
+    background: url(./imgs/Fondo.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    padding: 1%;
+    gap: 1%;
+}
+
+.inventario-container,
+.taller-container,
+.almacen-container {
+    background-color: rgba(213, 232, 232, 0.6);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.inventario-container {
+    width: 30%;
+}
+
+.taller-container {
+    width: 30%;
+}
+
+.almacen-container {
+    width: 30%;
+}
+
+.Titulo h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #222;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+}
+
+.inventario-container > div:not(.Titulo) {
+    background-color: rgba(255,255,255,0.55);
+    border-radius: 8px;
+    padding: 10px;
+    width: 80%;
+    text-align: center;
+    font-weight: bold;
+    cursor: grab;
+    transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+
+.inventario-container > div:not(.Titulo):hover {
+    transform: scale(1.03);
+    background-color: rgba(255,255,255,0.75);
+}
+
+.arrastrando {
+    opacity: 0.55;
+    transform: scale(0.94);
+}
+
+.estaciones-container {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.Taller {
+    width: 80%;
+    min-height: 170px;
+    background: rgba(255,255,255,0.45);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.Taller img {
+    width: 120px;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.Taller.acepta {
+    outline: 4px solid limegreen;
+    background-color: rgba(0, 255, 0, 0.15);
+}
+
+.Taller.rechaza {
+    outline: 4px solid red;
+    background-color: rgba(255, 0, 0, 0.15);
+}
+
+.almacen-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.almacen-container img {
+    width: 110px;
+    height: auto;
+}
+
+.cantidad {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #222;
+}
